@@ -1,3 +1,6 @@
+
+
+
  let number1 = 0;
   let number2 = 0;
   let result=0;
@@ -38,4 +41,8 @@
   result=number1/number2
   document.getElementById('result').innerHTML=result; 
   emptyBox();
+ }
+
+ function showValue(e) {
+    console.log(e)
  }
