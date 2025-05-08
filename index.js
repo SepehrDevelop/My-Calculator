@@ -33,7 +33,7 @@
   emptyBox();
  }
  
- function devide(){
+ function divide(){
   getNumbersFromTextbox();
   result=number1/number2
   document.getElementById('result').innerHTML=result; 
