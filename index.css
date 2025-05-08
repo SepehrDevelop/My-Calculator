@@ -1,0 +1,31 @@
+body {
+  background-color: teal;
+  font-family: Copperplate, sans-serif;
+}
+
+h2 {
+ font-family: Copperplate, sans-serif;
+}
+button {
+  font-family: Copperplate, sans-serif;
+  font-size: 16px;
+  margin: 5px;
+  padding: 8px 16px;
+  border: none;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}
+
+.lightgreen {
+  color: lightgreen;
+}
+
+.goldenrod {
+  color: goldenrod; 
+}
