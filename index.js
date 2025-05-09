@@ -30,7 +30,7 @@ let buttons = document.getElementsByClassName('button');
 
 for (let i=0; i<14; i++){
     buttons[i].addEventListener('click', function(e) {
-    	// let displayedNumber = e.target.innerHTML;
+    	screen.style.color = 'black';
 	screen.append(e.target.innerHTML)
     })
 }
@@ -40,6 +40,7 @@ let result=0;
 function equal(){
    result = eval(screen.innerHTML);
    screen.innerHTML = result;
+   screen.style.color = 'red';
  }
 
 let acButton = document.querySelector('.numberAc');
@@ -47,5 +48,9 @@ let acButton = document.querySelector('.numberAc');
 acButton.addEventListener('click', function() {
   screen.innerHTML = '';
 });
+
+function deleteOneDigit() {
+    screen.removeChild(screen.lastChild)
+}
 
   
