@@ -1,48 +1,51 @@
+let topRow = document.getElementById('topRow');
+let middleRow = document.getElementById('middleRow');
+let bottomRow = document.getElementById('bottomRow');
+
+for (let i=1; i<4; i++){
+    let button = document.createElement('button');
+    button.innerHTML = i;
+    button.classList.add("number0-9", "button")
+    topRow.append(button);
+}
+
+for (let i=4; i<7; i++){
+    let button = document.createElement('button');
+    button.innerHTML = i;
+    button.classList.add("number0-9", "button")
+    middleRow.append(button);
+}
+
+for (let i=7; i<10; i++){
+    let button = document.createElement('button');
+    button.innerHTML = i;
+    button.classList.add("number0-9", "button");
+    bottomRow.append(button);
+}
+
+let screen = document.getElementById('result');
+let buttons = document.getElementsByClassName('button');
 
 
 
- let number1 = 0;
-  let number2 = 0;
-  let result=0;
+for (let i=0; i<14; i++){
+    buttons[i].addEventListener('click', function(e) {
+    	// let displayedNumber = e.target.innerHTML;
+	screen.append(e.target.innerHTML)
+    })
+}
 
-  function getNumbersFromTextbox() {
-   number1=parseInt(document.getElementById('firstnumber').value);
-   number2=parseInt(document.getElementById('secondnumber').value);
-  }
+let result=0;
 
-  function emptyBox() {
-    document.getElementById('firstnumber').value='';
-    document.getElementById('secondnumber').value='';
-  }
+function equal(){
+   result = eval(screen.innerHTML);
+   screen.innerHTML = result;
+ }
+
+let acButton = document.querySelector('.numberAc');
+
+acButton.addEventListener('click', function() {
+  screen.innerHTML = '';
+});
+
   
-  function add(){
-   getNumbersFromTextbox();
-   result=number1+number2
-   document.getElementById('result').innerHTML=result;
-   emptyBox();
-  }
-
- function minus(){
-  getNumbersFromTextbox();
-  result=number1-number2
-  document.getElementById('result').innerHTML=result;
-  emptyBox();
- }
- 
- function multiple(){
-  getNumbersFromTextbox();
-  result=number1*number2
-  document.getElementById('result').innerHTML=result;
-  emptyBox();
- }
- 
- function divide(){
-  getNumbersFromTextbox();
-  result=number1/number2
-  document.getElementById('result').innerHTML=result; 
-  emptyBox();
- }
-
- function showValue(e) {
-    console.log(e)
- }

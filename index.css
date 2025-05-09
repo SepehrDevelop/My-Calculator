@@ -4,10 +4,6 @@ body {
 }
 
 
-h2 {
- font-family: Copperplate, sans-serif;
-}
-
 button {
   font-family: Copperplate, sans-serif;
   font-size: 15px;
@@ -64,6 +60,7 @@ input {
   margin-left: auto;
   margin-right: auto;
   background-color: #44256f;
+  border-radius: 0 0 20px 20px
 }
 
 .titleBorder {
@@ -72,7 +69,9 @@ input {
   margin-left: auto;
   margin-right: auto;
   background-color: #8e7fa3;
-}   
+  font-family: Copperplate, sans-serif;
+  border-radius: 20px 20px 0 0; 
+}
 
 #result {
  color: black;
@@ -83,4 +82,7 @@ input {
  margin-right: auto;
 }
 
+h2.thick {
+  font-weight: bold;
+}
 
